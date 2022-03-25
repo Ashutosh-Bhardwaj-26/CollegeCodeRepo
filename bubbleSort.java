@@ -12,7 +12,6 @@ class bubbleSort {
             bs.add(sc.nextInt());
         }
 
-        for (int i = 0; i < n-1; i++)
             for (int j = 0; j < n-i-1; j++)
                 if (bs.get(j) > bs.get(j+1))
                 {
