@@ -6,9 +6,9 @@ public class DFS extends TopologicalSort {
 	public static void dFs(ArrayList<ArrayList<Integer>> adj1,int source,int destination) {
 		adj = adj1;
 		System.out.println("DFS CALLED");
-		boolean vis[] = new boolean[adj.size()];
+		boolean vis[] = new boolean[adj.size()+1];
 		vis[source] = true;
-		boolean isReach = dfs(source,destination,vis);
+		boolean isReach = dfsStack(adj,source,destination);
 		System.out.println(isReach);
 	}
 	
@@ -34,13 +34,13 @@ public class DFS extends TopologicalSort {
 		while(!stack.isEmpty()) {
 			System.out.println("stack " + stack);
 			int cur = stack.pop();
-			if(cur == destination) return true;
+			//if(cur == destination) return true;
 			
 			for(int neighbour : adj.get(cur)) {
-				if(!vis[neighbour]) {
-					vis[neighbour] = true;
+//				if(!vis[neighbour]) {
+//					vis[neighbour] = true;
 					stack.push(neighbour);
-				}
+//				}
 			}
 		}
 		

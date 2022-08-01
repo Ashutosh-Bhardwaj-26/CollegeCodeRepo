@@ -7,7 +7,7 @@ public class BFS extends DFS{
 	
 	public static void bfs(ArrayList<ArrayList<Integer>> adj,int source,int destination) {
 		//visited array to not add the already added vertex to queue
-		boolean vis[] = new boolean[adj.size()];
+		boolean vis[] = new boolean[adj.size()+1];
 		System.out.println("BFS CALLED");
 		//parent array to mark the path [0,1,2,3,4,] = [-1,4,1,0,0]
 		int parent[] = new int[adj.size()];
@@ -29,9 +29,8 @@ public class BFS extends DFS{
 					parent[neighbour] = cur;
 				}
 			}
-			// System.out.print(q);
+			 System.out.print(q);
 		}
-		
 		//reverse m trace krna path
 		int cur = destination;
 
@@ -39,8 +38,6 @@ public class BFS extends DFS{
 			System.out.print(cur + "->");
 			cur = parent[cur];
 		}while(parent[cur]!=-1);
-		System.out.println(source);
+		System.out.println(source); 
 	}
-	
-
 }

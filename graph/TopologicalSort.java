@@ -15,6 +15,8 @@ public class TopologicalSort extends DetectCycleUndtirectDFS{
           if (vis[i] == false)
               topologicalsortUtil(adj, i, vis, stack);
 		  
+		  System.out.println(stack);
+		  
 		  while(!stack.isEmpty()) {
 			  System.out.println(stack.pop() + " ");
 		  }

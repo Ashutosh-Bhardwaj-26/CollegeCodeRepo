@@ -2,7 +2,7 @@ package graph;
 
 import java.util.*;
 
-public class Graph extends BFS{
+public class Graph extends BFS {
 	
 	//what is dense vs sparc graoh
 	
@@ -57,16 +57,16 @@ public class Graph extends BFS{
 			}
 			printGraph();  
 //			bfs(adj,0,2);
-//			dFs(adj,4,1);
+//			dFs(adj,0,3);
 //			System.out.println(dfsStack(adj,0,1));
 //			System.out.println(adj.size());
 			
-			System.out.println("is Cycle (undirected) : - " + detect(adj));
+//			System.out.println("is Cycle (undirected) : - " + detect(adj));
 			
-			System.out.println("is Cycle (directed) : - " + dDCD(adj));
+//			System.out.println("is Cycle (directed) : - " + dDCD(adj));
 			
-//			System.out.println("Topological sort called");
-//			topologiclasort(adj);
+			System.out.println("Topological sort called");
+			topologiclasort(adj);
 	
 			
 		}

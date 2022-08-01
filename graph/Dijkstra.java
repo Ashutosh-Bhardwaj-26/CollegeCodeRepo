@@ -10,7 +10,7 @@ public class Dijkstra{
 	class Pair implements Comparable<Pair>{
 		int v; 		// vertex
 		String psf; // path so far
-		int wsf;	//weight so far
+		int wsf;	//weight so far-
 		public Pair(int v, String psf, int wsf) {
 			super();
 			this.v = v;

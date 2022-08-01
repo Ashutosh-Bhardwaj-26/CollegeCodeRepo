@@ -12,7 +12,7 @@ public class ActivitySelection {
 		public int finish;
 		public Activity(int start, int finish) {
 			this.start = start;
-			this.finish = finish;
+			this.finish = finish; 	
 		}
 		
 	}
